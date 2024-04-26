@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        background: linear-gradient(
+          #ed5695,
+          #cb6982,
+          #a5708c,
+          #8b7d99,
+          #6a82a3,
+          #5486a7
+        );
+        height: 100vh;
+      }
+      img:nth-of-type(1) {
+        position: absolute;
+        left: 600px;
+        animation: jerry 5s infinite;
+        z-index: 1;
+      }
+      img:nth-of-type(2) {
+        position: absolute;
+        left: 600px;
+        animation: tom 5s infinite;
+        z-index: 2;
+      }
+      @keyframes jerry {
+        50% {
+          transform: translateX(-400px);
+        }
+        100% {
+          opacity: 0.5;
+          transform: translateX(400px);
+        }
+      }
+      @keyframes tom {
+        50% {
+          opacity: 0.5;
+          transform: translateX(400px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(-400px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img style="width: 300px" src="./jerry.png" alt="jerry" />
+    <img style="width: 300px" src="./tom.png" alt="tom" />
+  </body>
+</html>
